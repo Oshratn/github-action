@@ -39,5 +39,5 @@ jobs:
         uses: dorny/test-reporter@v1
         with:
           path: "*.xml"
-          reporter: jest-junit
+          reporter: java-junit
           name: Bla Tests
