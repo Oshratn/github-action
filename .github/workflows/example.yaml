@@ -36,10 +36,8 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Publish Unit Test Results
-        uses: mikepenz/action-junit-report@v3
-        if: always()
+        uses: dorny/test-reporter@v1
         with:
-          report_paths: "*.xml" 
-          require_tests: false
-          fail_on_failure: false
-          detailed_summary: true
+          path: "*.xml"
+          reporter: jest-junit
+          name: Bla Tests
